@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="etJ-ce-uyu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,117 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-Fr-bBD">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZPH-0r-0b7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Begin Run"/>
+                                <connections>
+                                    <segue destination="1dE-6h-uAx" kind="presentation" id="j9F-tA-X2h"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cKL-Fr-bBD" secondAttribute="bottom" id="4lX-lx-WrB"/>
+                            <constraint firstAttribute="trailing" secondItem="cKL-Fr-bBD" secondAttribute="trailing" id="7Dk-Sy-fmh"/>
+                            <constraint firstItem="cKL-Fr-bBD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q2V-zi-xtt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="5Fz-B4-RuR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1252" y="371"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="2Zt-mv-TAb">
+            <objects>
+                <viewController id="pd9-On-PIf" customClass="PathViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s4f-XH-nkl"/>
+                        <viewControllerLayoutGuide type="bottom" id="aSI-Sh-xox"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dBG-PU-qpP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-Te-5Uf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="515.5"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaO-mE-bHv">
+                                <rect key="frame" x="0.0" y="579" width="600" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ob8-Te-5Uf" firstAttribute="top" secondItem="s4f-XH-nkl" secondAttribute="bottom" id="4hG-SB-glU"/>
+                            <constraint firstItem="aSI-Sh-xox" firstAttribute="top" secondItem="WaO-mE-bHv" secondAttribute="bottom" id="50h-1T-6NY"/>
+                            <constraint firstItem="Ob8-Te-5Uf" firstAttribute="leading" secondItem="dBG-PU-qpP" secondAttribute="leading" id="LIH-y5-Sy7"/>
+                            <constraint firstAttribute="trailing" secondItem="Ob8-Te-5Uf" secondAttribute="trailing" id="izs-OB-bbv"/>
+                            <constraint firstItem="WaO-mE-bHv" firstAttribute="top" secondItem="Ob8-Te-5Uf" secondAttribute="bottom" id="kKA-EO-3Zl"/>
+                            <constraint firstItem="WaO-mE-bHv" firstAttribute="leading" secondItem="dBG-PU-qpP" secondAttribute="leading" id="yNv-dt-xf8"/>
+                            <constraint firstAttribute="trailing" secondItem="WaO-mE-bHv" secondAttribute="trailing" id="z8Z-hZ-ohe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="oSy-sz-Ck2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Sbi-LY-qtw">
+                            <connections>
+                                <action selector="actionStop:" destination="pd9-On-PIf" id="zAO-mD-OzY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="label" destination="WaO-mE-bHv" id="eDH-HT-gIl"/>
+                        <outlet property="mapView" destination="Ob8-Te-5Uf" id="t0m-hq-diR"/>
+                        <outlet property="stopButton" destination="Sbi-LY-qtw" id="TW9-UY-QwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cbm-a6-bIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2708" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lPl-nd-xpy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="etJ-ce-uyu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2ac-8z-7ns">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hXi-Jx-9b4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OvV-dv-9o9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="371"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9IQ-Iv-vou">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dE-6h-uAx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EZg-RB-K2l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pd9-On-PIf" kind="relationship" relationship="rootViewController" id="hvc-UF-XAL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtA-HD-BVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896" y="374"/>
         </scene>
     </scenes>
 </document>

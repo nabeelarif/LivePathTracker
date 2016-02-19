@@ -6,26 +6,81 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		7D94C9A31C7642AA004E52A6 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7D94C9A61C7642AA004E52A6 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				7D94C9A71C7642CF004E52A6 /* Mogenerator Run Script */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		5C0A2BDE290F2EE68799612E /* libPods-LivePathTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */; };
 		7D94C9871C7639E6004E52A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9861C7639E6004E52A6 /* main.m */; };
 		7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9891C7639E6004E52A6 /* AppDelegate.m */; };
-		7D94C98D1C7639E6004E52A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C98C1C7639E6004E52A6 /* ViewController.m */; };
+		7D94C98D1C7639E6004E52A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C98C1C7639E6004E52A6 /* HomeViewController.m */; };
 		7D94C9901C7639E6004E52A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C98E1C7639E6004E52A6 /* Main.storyboard */; };
 		7D94C9921C7639E6004E52A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C9911C7639E6004E52A6 /* Assets.xcassets */; };
 		7D94C9951C7639E6004E52A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D94C9931C7639E6004E52A6 /* LaunchScreen.storyboard */; };
+		7D94C99F1C763AE3004E52A6 /* LivePathDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C99D1C763AE3004E52A6 /* LivePathDatabase.xcdatamodeld */; };
+		7D94C9A21C763D90004E52A6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D94C9A11C763D90004E52A6 /* MapKit.framework */; };
+		7D94C9AA1C7645B3004E52A6 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9A91C7645B3004E52A6 /* BaseModel.m */; };
+		7D94C9B31C764612004E52A6 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9AE1C764612004E52A6 /* LocationModel.m */; };
+		7D94C9B41C764612004E52A6 /* PathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9B01C764612004E52A6 /* PathModel.m */; };
+		7D94C9B51C764612004E52A6 /* _LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9B11C764612004E52A6 /* _LocationModel.m */; };
+		7D94C9B61C764612004E52A6 /* _PathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9B21C764612004E52A6 /* _PathModel.m */; };
+		7D94C9BB1C76468A004E52A6 /* LivePathTrackerTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9BA1C76468A004E52A6 /* LivePathTrackerTheme.m */; };
+		7D94C9C01C7646FD004E52A6 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9BD1C7646FD004E52A6 /* UIColor+Theme.m */; };
+		7D94C9C11C7646FD004E52A6 /* UIFont+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9BF1C7646FD004E52A6 /* UIFont+Theme.m */; };
+		7D94C9C51C764789004E52A6 /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9C41C764789004E52A6 /* TitleLabel.m */; };
+		7D94C9C81C765506004E52A6 /* PathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9C71C765506004E52A6 /* PathViewController.m */; };
+		7D94C9CC1C7663B9004E52A6 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9CB1C7663B9004E52A6 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePathTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePathTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker.release.xcconfig"; sourceTree = "<group>"; };
+		5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePathTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C9821C7639E6004E52A6 /* LivePathTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePathTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C9861C7639E6004E52A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D94C9881C7639E6004E52A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D94C9891C7639E6004E52A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7D94C98B1C7639E6004E52A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7D94C98C1C7639E6004E52A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7D94C98B1C7639E6004E52A6 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		7D94C98C1C7639E6004E52A6 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7D94C98F1C7639E6004E52A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D94C9911C7639E6004E52A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D94C9941C7639E6004E52A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D94C9961C7639E6004E52A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D94C99E1C763AE3004E52A6 /* LivePathDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LivePathDatabase.xcdatamodel; sourceTree = "<group>"; };
+		7D94C9A11C763D90004E52A6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7D94C9A81C7645B3004E52A6 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		7D94C9A91C7645B3004E52A6 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		7D94C9AB1C764612004E52A6 /* _LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _LocationModel.h; sourceTree = "<group>"; };
+		7D94C9AC1C764612004E52A6 /* _PathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _PathModel.h; sourceTree = "<group>"; };
+		7D94C9AD1C764612004E52A6 /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		7D94C9AE1C764612004E52A6 /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		7D94C9AF1C764612004E52A6 /* PathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathModel.h; sourceTree = "<group>"; };
+		7D94C9B01C764612004E52A6 /* PathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathModel.m; sourceTree = "<group>"; };
+		7D94C9B11C764612004E52A6 /* _LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _LocationModel.m; sourceTree = "<group>"; };
+		7D94C9B21C764612004E52A6 /* _PathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _PathModel.m; sourceTree = "<group>"; };
+		7D94C9B91C76468A004E52A6 /* LivePathTrackerTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePathTrackerTheme.h; sourceTree = "<group>"; };
+		7D94C9BA1C76468A004E52A6 /* LivePathTrackerTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePathTrackerTheme.m; sourceTree = "<group>"; };
+		7D94C9BC1C7646FD004E52A6 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		7D94C9BD1C7646FD004E52A6 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		7D94C9BE1C7646FD004E52A6 /* UIFont+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Theme.h"; sourceTree = "<group>"; };
+		7D94C9BF1C7646FD004E52A6 /* UIFont+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Theme.m"; sourceTree = "<group>"; };
+		7D94C9C31C764789004E52A6 /* TitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLabel.h; sourceTree = "<group>"; };
+		7D94C9C41C764789004E52A6 /* TitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLabel.m; sourceTree = "<group>"; };
+		7D94C9C61C765506004E52A6 /* PathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathViewController.h; sourceTree = "<group>"; };
+		7D94C9C71C765506004E52A6 /* PathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathViewController.m; sourceTree = "<group>"; };
+		7D94C9CA1C7663B9004E52A6 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		7D94C9CB1C7663B9004E52A6 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +88,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D94C9A21C763D90004E52A6 /* MapKit.framework in Frameworks */,
+				5C0A2BDE290F2EE68799612E /* libPods-LivePathTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B09A295833774E2054DEAC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		501004B1908935D3C9016A91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */,
+				06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7D94C9791C7639E6004E52A6 = {
 			isa = PBXGroup;
 			children = (
+				7D94C9A11C763D90004E52A6 /* MapKit.framework */,
 				7D94C9841C7639E6004E52A6 /* LivePathTracker */,
 				7D94C9831C7639E6004E52A6 /* Products */,
+				501004B1908935D3C9016A91 /* Pods */,
+				1B09A295833774E2054DEAC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +135,21 @@
 		7D94C9841C7639E6004E52A6 /* LivePathTracker */ = {
 			isa = PBXGroup;
 			children = (
+				7D94C9C91C7663A5004E52A6 /* Utils */,
+				7D94C9C21C764768004E52A6 /* CustomViews */,
+				7D94C9B71C764665004E52A6 /* Theme */,
+				7D94C99C1C763AB5004E52A6 /* Model */,
 				7D94C9881C7639E6004E52A6 /* AppDelegate.h */,
 				7D94C9891C7639E6004E52A6 /* AppDelegate.m */,
-				7D94C98B1C7639E6004E52A6 /* ViewController.h */,
-				7D94C98C1C7639E6004E52A6 /* ViewController.m */,
+				7D94C98B1C7639E6004E52A6 /* HomeViewController.h */,
+				7D94C98C1C7639E6004E52A6 /* HomeViewController.m */,
 				7D94C98E1C7639E6004E52A6 /* Main.storyboard */,
 				7D94C9911C7639E6004E52A6 /* Assets.xcassets */,
 				7D94C9931C7639E6004E52A6 /* LaunchScreen.storyboard */,
 				7D94C9961C7639E6004E52A6 /* Info.plist */,
 				7D94C9851C7639E6004E52A6 /* Supporting Files */,
+				7D94C9C61C765506004E52A6 /* PathViewController.h */,
+				7D94C9C71C765506004E52A6 /* PathViewController.m */,
 			);
 			path = LivePathTracker;
 			sourceTree = "<group>";
@@ -79,6 +162,63 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7D94C99C1C763AB5004E52A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C99D1C763AE3004E52A6 /* LivePathDatabase.xcdatamodeld */,
+				7D94C9A01C763B18004E52A6 /* Objects */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7D94C9A01C763B18004E52A6 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C9AB1C764612004E52A6 /* _LocationModel.h */,
+				7D94C9B11C764612004E52A6 /* _LocationModel.m */,
+				7D94C9AC1C764612004E52A6 /* _PathModel.h */,
+				7D94C9B21C764612004E52A6 /* _PathModel.m */,
+				7D94C9AD1C764612004E52A6 /* LocationModel.h */,
+				7D94C9AE1C764612004E52A6 /* LocationModel.m */,
+				7D94C9AF1C764612004E52A6 /* PathModel.h */,
+				7D94C9B01C764612004E52A6 /* PathModel.m */,
+				7D94C9A81C7645B3004E52A6 /* BaseModel.h */,
+				7D94C9A91C7645B3004E52A6 /* BaseModel.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		7D94C9B71C764665004E52A6 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C9B91C76468A004E52A6 /* LivePathTrackerTheme.h */,
+				7D94C9BA1C76468A004E52A6 /* LivePathTrackerTheme.m */,
+				7D94C9BC1C7646FD004E52A6 /* UIColor+Theme.h */,
+				7D94C9BD1C7646FD004E52A6 /* UIColor+Theme.m */,
+				7D94C9BE1C7646FD004E52A6 /* UIFont+Theme.h */,
+				7D94C9BF1C7646FD004E52A6 /* UIFont+Theme.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		7D94C9C21C764768004E52A6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C9C31C764789004E52A6 /* TitleLabel.h */,
+				7D94C9C41C764789004E52A6 /* TitleLabel.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7D94C9C91C7663A5004E52A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C9CA1C7663B9004E52A6 /* Utility.h */,
+				7D94C9CB1C7663B9004E52A6 /* Utility.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "LivePathTracker" */;
 			buildPhases = (
+				407ACC2435465CA1557EC5F3 /* Check Pods Manifest.lock */,
 				7D94C97E1C7639E6004E52A6 /* Sources */,
 				7D94C97F1C7639E6004E52A6 /* Frameworks */,
 				7D94C9801C7639E6004E52A6 /* Resources */,
+				DEDEC55CC214BD5F60E76E03 /* Embed Pods Frameworks */,
+				8015C4FBFE77339046C26022 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +253,14 @@
 				TargetAttributes = {
 					7D94C9811C7639E6004E52A6 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					7D94C9A31C7642AA004E52A6 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -127,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				7D94C9811C7639E6004E52A6 /* LivePathTracker */,
+				7D94C9A31C7642AA004E52A6 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -144,14 +296,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		407ACC2435465CA1557EC5F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7D94C9A71C7642CF004E52A6 /* Mogenerator Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Mogenerator Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m LivePathTracker/Model/LivePathDatabase.xcdatamodeld -O LivePathTracker/Model/Objects --template-var arc=true --base-class BaseModel";
+		};
+		8015C4FBFE77339046C26022 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEDEC55CC214BD5F60E76E03 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D94C97E1C7639E6004E52A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D94C98D1C7639E6004E52A6 /* ViewController.m in Sources */,
+				7D94C9C51C764789004E52A6 /* TitleLabel.m in Sources */,
+				7D94C98D1C7639E6004E52A6 /* HomeViewController.m in Sources */,
 				7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */,
+				7D94C9C01C7646FD004E52A6 /* UIColor+Theme.m in Sources */,
+				7D94C9B31C764612004E52A6 /* LocationModel.m in Sources */,
+				7D94C9C81C765506004E52A6 /* PathViewController.m in Sources */,
+				7D94C9B41C764612004E52A6 /* PathModel.m in Sources */,
+				7D94C9CC1C7663B9004E52A6 /* Utility.m in Sources */,
+				7D94C9B61C764612004E52A6 /* _PathModel.m in Sources */,
+				7D94C9BB1C76468A004E52A6 /* LivePathTrackerTheme.m in Sources */,
+				7D94C9B51C764612004E52A6 /* _LocationModel.m in Sources */,
+				7D94C9C11C7646FD004E52A6 /* UIFont+Theme.m in Sources */,
 				7D94C9871C7639E6004E52A6 /* main.m in Sources */,
+				7D94C9AA1C7645B3004E52A6 /* BaseModel.m in Sources */,
+				7D94C99F1C763AE3004E52A6 /* LivePathDatabase.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -259,6 +485,7 @@
 		};
 		7D94C99A1C7639E6004E52A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
@@ -270,11 +497,26 @@
 		};
 		7D94C99B1C7639E6004E52A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.LivePathTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D94C9A41C7642AA004E52A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D94C9A51C7642AA004E52A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -298,8 +540,31 @@
 				7D94C99B1C7639E6004E52A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D94C9A61C7642AA004E52A6 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D94C9A41C7642AA004E52A6 /* Debug */,
+				7D94C9A51C7642AA004E52A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D94C99D1C763AE3004E52A6 /* LivePathDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D94C99E1C763AE3004E52A6 /* LivePathDatabase.xcdatamodel */,
+			);
+			currentVersion = 7D94C99E1C763AE3004E52A6 /* LivePathDatabase.xcdatamodel */;
+			path = LivePathDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7D94C97A1C7639E6004E52A6 /* Project object */;
 }
