@@ -11,7 +11,7 @@
 #import "LocationModel.h"
 #import "Utility.h"
 
-@interface PathViewController () <UIActionSheetDelegate, CLLocationManagerDelegate>
+@interface PathViewController () <UIActionSheetDelegate, CLLocationManagerDelegate,MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *stopButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -23,6 +23,7 @@
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSDate *timeStarted;
+@property (nonatomic) BOOL isFirstTime;
 
 @end
 
@@ -30,7 +31,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _isFirstTime = YES;
+    [self transparentNavigationBar];
+    [self setupMap];
     [self startRun];
+}
+-(void)transparentNavigationBar{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault]; //UIImageNamed:@"transparent.png"
+    self.navigationController.navigationBar.shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -51,16 +63,53 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)setupMap{
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
+}
+#pragma mark - MKMapViewDelegate
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation: (MKUserLocation *)userLocation
+{
+    if (_isFirstTime) {
+        _isFirstTime=NO;
+        _mapView.centerCoordinate = userLocation.location.coordinate;
+        MKCoordinateRegion adjustedRegion =  { {0.0, 0.0 }, { 0.0, 0.0 } };
+        adjustedRegion.center.latitude = userLocation.location.coordinate.latitude;
+        adjustedRegion.center.longitude = userLocation.location.coordinate.longitude;
+        adjustedRegion.span.longitudeDelta  = 0.15;
+        adjustedRegion.span.latitudeDelta  = 0.15;
+        [self.mapView setRegion:adjustedRegion animated:NO];
+    }else{
+//        _mapView.centerCoordinate = userLocation.location.coordinate;
+        [_mapView setCenterCoordinate:userLocation.location.coordinate animated:YES];
+    }
+    
+}
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
+{
+    if ([overlay isKindOfClass:[MKPolyline class]]) {
+        MKPolyline *polyLine = (MKPolyline *)overlay;
+        MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+        aRenderer.strokeColor = [UIColor blueColor];
+        aRenderer.lineWidth = 3;
+        return aRenderer;
+    }
+    return nil;
+}
 #pragma mark - Timer and location updates
 -(void)startRun
 {
     self.seconds = 0;
     self.distance = 0;
     self.locations = [NSMutableArray array];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
-                                                selector:@selector(eachSecond) userInfo:nil repeats:YES];
     [self startLocationUpdates];
-    _timeStarted = [NSDate date];
+    //Ignore location manager values for 2 seconds to avoid false values.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        self.locationManager.delegate = self;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
+                                                    selector:@selector(eachSecond) userInfo:nil repeats:YES];
+        _timeStarted = [NSDate date];
+    });
 }
 - (void)startLocationUpdates
 {
@@ -70,12 +119,14 @@
         self.locationManager = [[CLLocationManager alloc] init];
     }
     
-    self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.activityType = CLActivityTypeFitness;
     
     // Movement threshold for new events.
-    self.locationManager.distanceFilter = 10; // meters
+    self.locationManager.distanceFilter = 5; // meters
+    
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager requestAlwaysAuthorization];
     
     [self.locationManager startUpdatingLocation];
 }
@@ -83,7 +134,7 @@
 {
     self.seconds++;
     self.label.text = [NSString stringWithFormat:
-                       @"   Time: %@\n  Distance: %@\n  Pace: %@",
+                       @"  Time: %@\n  Distance: %@\n  Pace: %@",
                        [Utility stringifySecondCount:self.seconds usingLongFormat:NO],
                        [Utility stringifyDistance:self.distance],
                        [Utility stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
@@ -94,11 +145,22 @@
 {
     NSLog(@"New location");
     for (CLLocation *newLocation in locations) {
-        if (newLocation.horizontalAccuracy < 20) {
+        
+        NSDate *eventDate = newLocation.timestamp;
+        
+        NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+        
+        if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
             
             // update distance
             if (self.locations.count > 0) {
                 self.distance += [newLocation distanceFromLocation:self.locations.lastObject];
+                
+                CLLocationCoordinate2D coords[2];
+                coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;
+                coords[1] = newLocation.coordinate;
+                
+                [self.mapView addOverlay:[MKPolyline polylineWithCoordinates:coords count:2]];
             }
             
             [self.locations addObject:newLocation];
@@ -109,6 +171,7 @@
 
 #pragma mark - Action Methods
 - (IBAction)actionStop:(id)sender {
+    [_locationManager stopUpdatingLocation];
     UIAlertController *actionController = [[UIAlertController alloc] init];
     actionController.message = @"You have a track completed.";
     actionController.preferredAction = UIAlertControllerStyleActionSheet;
@@ -118,6 +181,7 @@
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //Save;
         [self saveCurrentRun];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }];
     UIAlertAction *discardAction = [UIAlertAction actionWithTitle:@"Discard" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
 //        [self discardCurrentRun];

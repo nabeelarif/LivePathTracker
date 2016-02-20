@@ -88,4 +88,14 @@ static float const metersInMile = 1609.344;
     
     return [NSString stringWithFormat:@"%i:%02i %@", paceMin, paceSec, unitName];
 }
++(NSDateFormatter*)dateFormatter{
+    static dispatch_once_t token;
+    static NSDateFormatter *dateFormatter;
+    dispatch_once(&token, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    });
+    return dateFormatter;
+}
 @end
