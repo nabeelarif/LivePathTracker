@@ -11,6 +11,7 @@
 #import "LocationModel.h"
 #import "PathModel.h"
 #import "Utility.h"
+#import "MulticolorPolylineSegment.h"
 
 @interface DetailViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.mapView.delegate = self;
+    self.title = [[Utility dateFormatter] stringFromDate:_currentPathModel.timeStarted];
     NSSortDescriptor *sortDateBased = [NSSortDescriptor sortDescriptorWithKey:@"timeStamp" ascending:YES];
     _arrLocation = [_currentPathModel.locations sortedArrayUsingDescriptors:@[sortDateBased]];
     [self loadMap];
@@ -79,10 +81,10 @@
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay
 {
     if ([overlay isKindOfClass:[MKPolyline class]]) {
-        MKPolyline *polyLine = (MKPolyline *)overlay;
+        MulticolorPolylineSegment *polyLine = (MulticolorPolylineSegment *)overlay;
         MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-        aRenderer.strokeColor = [UIColor blackColor];
-        aRenderer.lineWidth = 3;
+        aRenderer.strokeColor = polyLine.color;
+        aRenderer.lineWidth = 6;
         return aRenderer;
     }
     
@@ -110,8 +112,8 @@
         // set the map bounds
         [self.mapView setRegion:[self defineRegion]];
         
-        // make the line(s!) on the map
-        [self.mapView addOverlay:[self polyLine]];
+        NSArray *colorSegmentArray = [Utility colorSegmentsForLocations:_arrLocation];
+        [self.mapView addOverlays:colorSegmentArray];
         
     } else {
         

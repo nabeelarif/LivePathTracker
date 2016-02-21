@@ -12,6 +12,7 @@
 +(UIColor*)labelColor;
 +(UIColor*)tableViewCellBackgroundColor;
 +(UIColor*)appColorWithLightness:(CGFloat)lightness;
++(UIColor*)appColorWithLightness:(CGFloat)lightness alpha:(CGFloat)alpha;
 
 #pragma mark - Util
 + (UIColor*)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;

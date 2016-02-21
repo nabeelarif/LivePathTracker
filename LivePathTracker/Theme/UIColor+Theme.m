@@ -22,11 +22,15 @@
 }
 +(UIColor*)appColorWithLightness:(CGFloat)lightness
 {
+    return [self appColorWithLightness:lightness alpha:1.0];
+}
++(UIColor*)appColorWithLightness:(CGFloat)lightness alpha:(CGFloat)alpha
+{
     NSInteger index = round(lightness*20.);
     index = index%20;
     index = 20-index;
     NSString *colorCode = (NSString *)[appColorArray objectAtIndex:index];
-    return [self colorWithHex:colorCode alpha:1.0];
+    return [self colorWithHex:colorCode alpha:alpha];
 }
 
 #pragma mark - Util methods

@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "LocationModel.h"
 #import "Utility.h"
+#import "UIColor+Theme.h"
 
 @interface PathViewController () <UIActionSheetDelegate, CLLocationManagerDelegate,MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *stopButton;
@@ -32,16 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _isFirstTime = YES;
+    self.label.text = nil;
     [self transparentNavigationBar];
     [self setupMap];
     [self startRun];
 }
 -(void)transparentNavigationBar{
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault]; //UIImageNamed:@"transparent.png"
-    self.navigationController.navigationBar.shadowImage = [UIImage new];////UIImageNamed:@"transparent.png"
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    [self.navigationController.navigationBar setBackgroundImage:[Utility imageFromColor:[UIColor appColorWithLightness:0.7 alpha:0.5]] forBarMetrics:UIBarMetricsDefault]; 
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 - (void)viewWillDisappear:(BOOL)animated

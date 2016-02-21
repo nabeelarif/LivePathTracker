@@ -7,6 +7,8 @@
 //
 
 #import "Utility.h"
+#import "LocationModel.h"
+#import "MulticolorPolylineSegment.h"
 
 
 static bool const isMetric = YES;
@@ -97,5 +99,99 @@ static float const metersInMile = 1609.344;
         [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     });
     return dateFormatter;
+}
++ (NSArray *)colorSegmentsForLocations:(NSArray *)locations
+{
+    // make array of all speeds, find slowest+fastest
+    NSMutableArray *speeds = [NSMutableArray array];
+    double slowestSpeed = DBL_MAX;
+    double fastestSpeed = 0.0;
+    
+    for (int i = 1; i < locations.count; i++) {
+        LocationModel *firstLoc = [locations objectAtIndex:(i-1)];
+        LocationModel *secondLoc = [locations objectAtIndex:i];
+        
+        CLLocation *firstLocCL = [[CLLocation alloc] initWithLatitude:firstLoc.latitudeValue longitude:firstLoc.longitudeValue];
+        CLLocation *secondLocCL = [[CLLocation alloc] initWithLatitude:secondLoc.latitudeValue longitude:secondLoc.longitudeValue];
+        
+        double distance = [secondLocCL distanceFromLocation:firstLocCL];
+        double time = [secondLoc.timeStamp timeIntervalSinceDate:firstLoc.timeStamp];
+        double speed = distance/time;
+        
+        slowestSpeed = speed < slowestSpeed ? speed : slowestSpeed;
+        fastestSpeed = speed > fastestSpeed ? speed : fastestSpeed;
+        
+        [speeds addObject:@(speed)];
+    }
+    
+    
+    // now knowing the slowest+fastest, we can get mean too
+    double meanSpeed = (slowestSpeed + fastestSpeed)/2;
+    
+    // RGB for red (slowest)
+    CGFloat r_red = 1.0f;
+    CGFloat r_green = 20/255.0f;
+    CGFloat r_blue = 44/255.0f;
+    
+    // RGB for yellow (middle)
+    CGFloat y_red = 1.0f;
+    CGFloat y_green = 215/255.0f;
+    CGFloat y_blue = 0.0f;
+    
+    // RGB for green (fastest)
+    CGFloat g_red = 0.0f;
+    CGFloat g_green = 146/255.0f;
+    CGFloat g_blue = 78/255.0f;
+    
+    NSMutableArray *colorSegments = [NSMutableArray array];
+    
+    for (int i = 1; i < locations.count; i++) {
+        LocationModel *firstLoc = [locations objectAtIndex:(i-1)];
+        LocationModel *secondLoc = [locations objectAtIndex:i];
+        
+        CLLocationCoordinate2D coords[2];
+        coords[0].latitude = firstLoc.latitudeValue;
+        coords[0].longitude = firstLoc.longitudeValue;
+        
+        coords[1].latitude = secondLoc.latitudeValue;
+        coords[1].longitude = secondLoc.longitudeValue;
+        
+        NSNumber *speed = [speeds objectAtIndex:(i-1)];
+        UIColor *color = [UIColor blackColor];
+        
+        // between red and yellow
+        if (speed.doubleValue < meanSpeed) {
+            double ratio = (speed.doubleValue - slowestSpeed) / (meanSpeed - slowestSpeed);
+            CGFloat red = r_red + ratio * (y_red - r_red);
+            CGFloat green = r_green + ratio * (y_green - r_green);
+            CGFloat blue = r_blue + ratio * (y_blue - r_blue);
+            color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+            
+            // between yellow and green
+        } else {
+            double ratio = (speed.doubleValue - meanSpeed) / (fastestSpeed - meanSpeed);
+            CGFloat red = y_red + ratio * (g_red - y_red);
+            CGFloat green = y_green + ratio * (g_green - y_green);
+            CGFloat blue = y_blue + ratio * (g_blue - y_blue);
+            color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+        }
+        
+        MulticolorPolylineSegment *segment = [MulticolorPolylineSegment polylineWithCoordinates:coords count:2];
+        segment.color = color;
+        
+        [colorSegments addObject:segment];
+    }
+    
+    return colorSegments;
+}
++ (UIImage *)imageFromColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 @end

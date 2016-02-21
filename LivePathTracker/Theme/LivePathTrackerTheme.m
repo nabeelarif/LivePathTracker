@@ -12,6 +12,9 @@
 #import "UIColor+Theme.h"
 #import "HomeViewController.h"
 #import "BigButton.h"
+#import "ActivityTableViewController.h"
+#import "PathViewController.h"
+#import "LeftMenuTableViewController.h"
 
 @class UIButtonLabel;
 @implementation LivePathTrackerTheme
@@ -42,14 +45,13 @@
     [[PathCell appearance] setSelectedBackgroundView:selectionView];
     
     // Title label
-    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil]
-     setFont:[UIFont labelFontOfSize:23]];
-    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil]
-     setShadowColor:[UIColor lightGrayColor]];
-    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil]
-     setShadowOffset:CGSizeMake(0., 1.)];
-    //    [[TitleLabel appearanceWhenContainedIn:UITableViewCell.class, nil]
-    //     setTextColor:[UIColor appColorWithLightness:0.2]];
+    [[TitleLabel appearance] setFont:[UIFont labelFontOfSize:23]];
+    [[TitleLabel appearance] setShadowColor:[UIColor lightGrayColor]];
+    [[TitleLabel appearance] setShadowOffset:CGSizeMake(0., 1.)];
+    [[TitleLabel appearance] setTextColor:[UIColor colorWithHex:@"#800000" alpha:1.]];
+    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil] setFont:[UIFont labelFontOfSize:23]];
+    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil] setShadowColor:[UIColor lightGrayColor]];
+    [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil] setShadowOffset:CGSizeMake(0., 1.)];
     [[TitleLabel appearanceWhenContainedIn:PathCell.class, nil] setTextColor:[UIColor colorWithHex:@"#800000" alpha:1.]];
     
     
@@ -71,6 +73,9 @@
     //header footer view
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor appColorWithLightness:0.2]];
     [[UILabel appearanceWhenContainedInInstancesOfClasses:@[UITableViewHeaderFooterView.class]] setTextColor:[UIColor appColorWithLightness:0.95]];
+    
+    //
+    [[UIImageView appearance] setTintColor:[UIColor appColorWithLightness:0.2]];
     
 }
 + (void)applyThemeToStatusBar
@@ -98,21 +103,5 @@
     [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
     //Apply theme to UIBarbuton
     [[UIBarButtonItem appearance] setTintColor:[UIColor appColorWithLightness:0.2]];
-    UIImage *barButtonBkg = [self imageFromColor:[UIColor appColorWithLightness:0.8]];
-    [[UIBarButtonItem appearance] setBackgroundImage:barButtonBkg
-                                            forState:UIControlStateNormal
-                                               style:UIBarButtonItemStylePlain
-                                          barMetrics:UIBarMetricsDefault];
-}
-
-+ (UIImage *)imageFromColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0, 0, 1, 1);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
 }
 @end

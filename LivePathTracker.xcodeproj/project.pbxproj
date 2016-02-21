@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		5C0A2BDE290F2EE68799612E /* libPods-LivePathTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */; };
 		7D94C9871C7639E6004E52A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9861C7639E6004E52A6 /* main.m */; };
 		7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9891C7639E6004E52A6 /* AppDelegate.m */; };
 		7D94C98D1C7639E6004E52A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C98C1C7639E6004E52A6 /* HomeViewController.m */; };
@@ -55,15 +54,32 @@
 		7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9141C78A880002B11BC /* oprit.gpx */; };
 		7DF6E9221C78EFAF002B11BC /* BigButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6E9211C78EFAF002B11BC /* BigButton.m */; };
 		7DF6E9251C790149002B11BC /* highway-919073_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */; };
-		7DF6E94F1C79080A002B11BC /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94D1C79080A002B11BC /* iTunesArtwork.png */; };
-		7DF6E9501C79080A002B11BC /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x.png */; };
+		7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94D1C79080A002B11BC /* iTunesArtwork */; };
+		7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */; };
+		7DFDBACC1C79AAB000A42B53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */; };
+		7DFDBACF1C79B2FE00A42B53 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBACE1C79B2FE00A42B53 /* LeftMenuTableViewController.m */; };
+		7DFDBAD31C79B86A00A42B53 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAD21C79B86A00A42B53 /* MainViewController.m */; };
+		7DFDBAD61C79B88500A42B53 /* MainSlidingAnimationcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAD51C79B88500A42B53 /* MainSlidingAnimationcontroller.m */; };
+		7DFDBAD91C79BB4700A42B53 /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAD81C79BB4700A42B53 /* ActivityTableViewController.m */; };
+		7DFDBADD1C79C04400A42B53 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBADA1C79C04400A42B53 /* menu@3x.png */; };
+		7DFDBADE1C79C04400A42B53 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBADB1C79C04400A42B53 /* menu@2x.png */; };
+		7DFDBADF1C79C04400A42B53 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBADC1C79C04400A42B53 /* menu.png */; };
+		7DFDBAE61C79C45C00A42B53 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE01C79C45C00A42B53 /* clock.png */; };
+		7DFDBAE71C79C45C00A42B53 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE11C79C45C00A42B53 /* clock@2x.png */; };
+		7DFDBAE81C79C45C00A42B53 /* clock@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE21C79C45C00A42B53 /* clock@3x.png */; };
+		7DFDBAE91C79C45C00A42B53 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE31C79C45C00A42B53 /* home.png */; };
+		7DFDBAEA1C79C45C00A42B53 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE41C79C45C00A42B53 /* home@2x.png */; };
+		7DFDBAEB1C79C45C00A42B53 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE51C79C45C00A42B53 /* home@3x.png */; };
+		7DFDBAEE1C79DC2D00A42B53 /* LeftMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAED1C79DC2D00A42B53 /* LeftMenuHeaderView.m */; };
+		7DFDBAF01C79DC3B00A42B53 /* LeftMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAEF1C79DC3B00A42B53 /* LeftMenuHeaderView.xib */; };
+		9B8DA573867949B0140D31BB /* libPods-GoTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F9E318166A0D5DA1414557 /* libPods-GoTime.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePathTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker.debug.xcconfig"; sourceTree = "<group>"; };
-		06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivePathTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker.release.xcconfig"; sourceTree = "<group>"; };
-		5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivePathTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D94C9821C7639E6004E52A6 /* LivePathTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePathTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		237B57568BBE8A3A687D50B8 /* Pods-GoTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.debug.xcconfig"; sourceTree = "<group>"; };
+		26F9E318166A0D5DA1414557 /* libPods-GoTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C37EDA596C16D0F537BD281 /* Pods-GoTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.release.xcconfig"; sourceTree = "<group>"; };
+		7D94C9821C7639E6004E52A6 /* Go Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C9861C7639E6004E52A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D94C9881C7639E6004E52A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D94C9891C7639E6004E52A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,8 +129,30 @@
 		7DF6E9201C78EFAF002B11BC /* BigButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigButton.h; sourceTree = "<group>"; };
 		7DF6E9211C78EFAF002B11BC /* BigButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigButton.m; sourceTree = "<group>"; };
 		7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "highway-919073_1280.jpg"; sourceTree = "<group>"; };
-		7DF6E94D1C79080A002B11BC /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		7DF6E94D1C79080A002B11BC /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		7DFDBACA1C79AAB000A42B53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
+		7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
+		7DFDBACD1C79B2FE00A42B53 /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
+		7DFDBACE1C79B2FE00A42B53 /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewController.m; sourceTree = "<group>"; };
+		7DFDBAD11C79B86A00A42B53 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7DFDBAD21C79B86A00A42B53 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7DFDBAD41C79B88500A42B53 /* MainSlidingAnimationcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSlidingAnimationcontroller.h; sourceTree = "<group>"; };
+		7DFDBAD51C79B88500A42B53 /* MainSlidingAnimationcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSlidingAnimationcontroller.m; sourceTree = "<group>"; };
+		7DFDBAD71C79BB4700A42B53 /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewController.h; sourceTree = "<group>"; };
+		7DFDBAD81C79BB4700A42B53 /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewController.m; sourceTree = "<group>"; };
+		7DFDBADA1C79C04400A42B53 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
+		7DFDBADB1C79C04400A42B53 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		7DFDBADC1C79C04400A42B53 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		7DFDBAE01C79C45C00A42B53 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		7DFDBAE11C79C45C00A42B53 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
+		7DFDBAE21C79C45C00A42B53 /* clock@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@3x.png"; sourceTree = "<group>"; };
+		7DFDBAE31C79C45C00A42B53 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		7DFDBAE41C79C45C00A42B53 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		7DFDBAE51C79C45C00A42B53 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
+		7DFDBAEC1C79DC2D00A42B53 /* LeftMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuHeaderView.h; sourceTree = "<group>"; };
+		7DFDBAED1C79DC2D00A42B53 /* LeftMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuHeaderView.m; sourceTree = "<group>"; };
+		7DFDBAEF1C79DC3B00A42B53 /* LeftMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,28 +161,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D94C9A21C763D90004E52A6 /* MapKit.framework in Frameworks */,
-				5C0A2BDE290F2EE68799612E /* libPods-LivePathTracker.a in Frameworks */,
+				9B8DA573867949B0140D31BB /* libPods-GoTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B09A295833774E2054DEAC1 /* Frameworks */ = {
+		1C05FC6E1324F7CAF17D8A43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BDDBDE764BFF6ECAFEC8B90 /* libPods-LivePathTracker.a */,
+				26F9E318166A0D5DA1414557 /* libPods-GoTime.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		501004B1908935D3C9016A91 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */,
-				06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		7D94C9791C7639E6004E52A6 = {
@@ -153,15 +182,15 @@
 				7D94C9A11C763D90004E52A6 /* MapKit.framework */,
 				7D94C9841C7639E6004E52A6 /* LivePathTracker */,
 				7D94C9831C7639E6004E52A6 /* Products */,
-				501004B1908935D3C9016A91 /* Pods */,
-				1B09A295833774E2054DEAC1 /* Frameworks */,
+				E3AA0948B810E10CC7A4CAFF /* Pods */,
+				1C05FC6E1324F7CAF17D8A43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7D94C9831C7639E6004E52A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D94C9821C7639E6004E52A6 /* LivePathTracker.app */,
+				7D94C9821C7639E6004E52A6 /* Go Time.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,21 +204,16 @@
 				7D94C9C21C764768004E52A6 /* CustomViews */,
 				7D94C9B71C764665004E52A6 /* Theme */,
 				7D94C99C1C763AB5004E52A6 /* Model */,
+				7DFDBAD01C79B6FB00A42B53 /* Controllers */,
 				7D94C9881C7639E6004E52A6 /* AppDelegate.h */,
 				7D94C9891C7639E6004E52A6 /* AppDelegate.m */,
-				7D94C98B1C7639E6004E52A6 /* HomeViewController.h */,
-				7D94C98C1C7639E6004E52A6 /* HomeViewController.m */,
 				7D94C98E1C7639E6004E52A6 /* Main.storyboard */,
 				7D94C9911C7639E6004E52A6 /* Assets.xcassets */,
 				7D94C9931C7639E6004E52A6 /* LaunchScreen.storyboard */,
 				7D94C9961C7639E6004E52A6 /* Info.plist */,
 				7D94C9851C7639E6004E52A6 /* Supporting Files */,
-				7D94C9C61C765506004E52A6 /* PathViewController.h */,
-				7D94C9C71C765506004E52A6 /* PathViewController.m */,
-				7DF6E9061C789090002B11BC /* DetailViewController.h */,
-				7DF6E9071C789090002B11BC /* DetailViewController.m */,
-				7DF6E94D1C79080A002B11BC /* iTunesArtwork.png */,
-				7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x.png */,
+				7DF6E94D1C79080A002B11BC /* iTunesArtwork */,
+				7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */,
 			);
 			path = LivePathTracker;
 			sourceTree = "<group>";
@@ -248,6 +272,11 @@
 				7D94C9C41C764789004E52A6 /* TitleLabel.m */,
 				7DF6E9201C78EFAF002B11BC /* BigButton.h */,
 				7DF6E9211C78EFAF002B11BC /* BigButton.m */,
+				7DFDBACA1C79AAB000A42B53 /* MulticolorPolylineSegment.h */,
+				7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */,
+				7DFDBAEC1C79DC2D00A42B53 /* LeftMenuHeaderView.h */,
+				7DFDBAED1C79DC2D00A42B53 /* LeftMenuHeaderView.m */,
+				7DFDBAEF1C79DC3B00A42B53 /* LeftMenuHeaderView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -282,32 +311,71 @@
 		7DF6E9231C79013F002B11BC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7DFDBAE01C79C45C00A42B53 /* clock.png */,
+				7DFDBAE11C79C45C00A42B53 /* clock@2x.png */,
+				7DFDBAE21C79C45C00A42B53 /* clock@3x.png */,
+				7DFDBAE31C79C45C00A42B53 /* home.png */,
+				7DFDBAE41C79C45C00A42B53 /* home@2x.png */,
+				7DFDBAE51C79C45C00A42B53 /* home@3x.png */,
+				7DFDBADA1C79C04400A42B53 /* menu@3x.png */,
+				7DFDBADB1C79C04400A42B53 /* menu@2x.png */,
+				7DFDBADC1C79C04400A42B53 /* menu.png */,
 				7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
 		};
+		7DFDBAD01C79B6FB00A42B53 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D94C98B1C7639E6004E52A6 /* HomeViewController.h */,
+				7D94C98C1C7639E6004E52A6 /* HomeViewController.m */,
+				7D94C9C61C765506004E52A6 /* PathViewController.h */,
+				7D94C9C71C765506004E52A6 /* PathViewController.m */,
+				7DF6E9061C789090002B11BC /* DetailViewController.h */,
+				7DF6E9071C789090002B11BC /* DetailViewController.m */,
+				7DFDBACD1C79B2FE00A42B53 /* LeftMenuTableViewController.h */,
+				7DFDBACE1C79B2FE00A42B53 /* LeftMenuTableViewController.m */,
+				7DFDBAD11C79B86A00A42B53 /* MainViewController.h */,
+				7DFDBAD21C79B86A00A42B53 /* MainViewController.m */,
+				7DFDBAD41C79B88500A42B53 /* MainSlidingAnimationcontroller.h */,
+				7DFDBAD51C79B88500A42B53 /* MainSlidingAnimationcontroller.m */,
+				7DFDBAD71C79BB4700A42B53 /* ActivityTableViewController.h */,
+				7DFDBAD81C79BB4700A42B53 /* ActivityTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E3AA0948B810E10CC7A4CAFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				237B57568BBE8A3A687D50B8 /* Pods-GoTime.debug.xcconfig */,
+				5C37EDA596C16D0F537BD281 /* Pods-GoTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D94C9811C7639E6004E52A6 /* LivePathTracker */ = {
+		7D94C9811C7639E6004E52A6 /* GoTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "LivePathTracker" */;
+			buildConfigurationList = 7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "GoTime" */;
 			buildPhases = (
-				407ACC2435465CA1557EC5F3 /* Check Pods Manifest.lock */,
+				141FB9F05E22673BF49EDDB7 /* Check Pods Manifest.lock */,
 				7D94C97E1C7639E6004E52A6 /* Sources */,
 				7D94C97F1C7639E6004E52A6 /* Frameworks */,
 				7D94C9801C7639E6004E52A6 /* Resources */,
-				DEDEC55CC214BD5F60E76E03 /* Embed Pods Frameworks */,
-				8015C4FBFE77339046C26022 /* Copy Pods Resources */,
+				CF49FC777688134C92159128 /* Embed Pods Frameworks */,
+				8B80039A575E5C184D46A17B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LivePathTracker;
+			name = GoTime;
 			productName = LivePathTracker;
-			productReference = 7D94C9821C7639E6004E52A6 /* LivePathTracker.app */;
+			productReference = 7D94C9821C7639E6004E52A6 /* Go Time.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -321,6 +389,7 @@
 				TargetAttributes = {
 					7D94C9811C7639E6004E52A6 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9FH974544H;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -345,7 +414,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D94C9811C7639E6004E52A6 /* LivePathTracker */,
+				7D94C9811C7639E6004E52A6 /* GoTime */,
 				7D94C9A31C7642AA004E52A6 /* Mogenerator */,
 			);
 		};
@@ -356,30 +425,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFDBAEA1C79C45C00A42B53 /* home@2x.png in Resources */,
 				7DF6E9161C78A880002B11BC /* A2LiToA9Re.gpx in Resources */,
 				7D94C9951C7639E6004E52A6 /* LaunchScreen.storyboard in Resources */,
 				7DF6E91D1C78A880002B11BC /* n402Re.gpx in Resources */,
 				7DF6E9151C78A880002B11BC /* A2Li.gpx in Resources */,
-				7DF6E9501C79080A002B11BC /* iTunesArtwork@2x.png in Resources */,
+				7DFDBADE1C79C04400A42B53 /* menu@2x.png in Resources */,
+				7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */,
 				7DF6E9191C78A880002B11BC /* A2ReTest.gpx in Resources */,
 				7DF6E9171C78A880002B11BC /* A2Re.gpx in Resources */,
-				7DF6E94F1C79080A002B11BC /* iTunesArtwork.png in Resources */,
+				7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */,
+				7DFDBAEB1C79C45C00A42B53 /* home@3x.png in Resources */,
 				7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */,
 				7DF6E9181C78A880002B11BC /* A2ReLong.gpx in Resources */,
 				7DF6E91C1C78A880002B11BC /* n402Li.gpx in Resources */,
+				7DFDBAE61C79C45C00A42B53 /* clock.png in Resources */,
 				7DF6E91E1C78A880002B11BC /* N419Li.gpx in Resources */,
 				7DF6E9251C790149002B11BC /* highway-919073_1280.jpg in Resources */,
+				7DFDBAF01C79DC3B00A42B53 /* LeftMenuHeaderView.xib in Resources */,
 				7DF6E91A1C78A880002B11BC /* A12.gpx in Resources */,
 				7DF6E91B1C78A880002B11BC /* afslag.gpx in Resources */,
+				7DFDBADF1C79C04400A42B53 /* menu.png in Resources */,
+				7DFDBAE81C79C45C00A42B53 /* clock@3x.png in Resources */,
 				7D94C9921C7639E6004E52A6 /* Assets.xcassets in Resources */,
+				7DFDBAE91C79C45C00A42B53 /* home.png in Resources */,
+				7DFDBADD1C79C04400A42B53 /* menu@3x.png in Resources */,
 				7D94C9901C7639E6004E52A6 /* Main.storyboard in Resources */,
+				7DFDBAE71C79C45C00A42B53 /* clock@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		407ACC2435465CA1557EC5F3 /* Check Pods Manifest.lock */ = {
+		141FB9F05E22673BF49EDDB7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,7 +487,7 @@
 			shellPath = /bin/sh;
 			shellScript = "mogenerator -m LivePathTracker/Model/LivePathDatabase.xcdatamodeld -O LivePathTracker/Model/Objects --template-var arc=true --base-class BaseModel";
 		};
-		8015C4FBFE77339046C26022 /* Copy Pods Resources */ = {
+		8B80039A575E5C184D46A17B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,10 +499,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoTime/Pods-GoTime-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEDEC55CC214BD5F60E76E03 /* Embed Pods Frameworks */ = {
+		CF49FC777688134C92159128 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LivePathTracker/Pods-LivePathTracker-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoTime/Pods-GoTime-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -448,12 +527,18 @@
 				7D94C9C51C764789004E52A6 /* TitleLabel.m in Sources */,
 				7D94C98D1C7639E6004E52A6 /* HomeViewController.m in Sources */,
 				7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */,
+				7DFDBAD31C79B86A00A42B53 /* MainViewController.m in Sources */,
+				7DFDBAEE1C79DC2D00A42B53 /* LeftMenuHeaderView.m in Sources */,
+				7DFDBAD91C79BB4700A42B53 /* ActivityTableViewController.m in Sources */,
 				7DF6E9081C789090002B11BC /* DetailViewController.m in Sources */,
 				7D94C9C01C7646FD004E52A6 /* UIColor+Theme.m in Sources */,
 				7DF6E9221C78EFAF002B11BC /* BigButton.m in Sources */,
 				7D94C9B31C764612004E52A6 /* LocationModel.m in Sources */,
 				7D94C9C81C765506004E52A6 /* PathViewController.m in Sources */,
 				7D94C9B41C764612004E52A6 /* PathModel.m in Sources */,
+				7DFDBACF1C79B2FE00A42B53 /* LeftMenuTableViewController.m in Sources */,
+				7DFDBAD61C79B88500A42B53 /* MainSlidingAnimationcontroller.m in Sources */,
+				7DFDBACC1C79AAB000A42B53 /* MulticolorPolylineSegment.m in Sources */,
 				7D94C9CC1C7663B9004E52A6 /* Utility.m in Sources */,
 				7D94C9B61C764612004E52A6 /* _PathModel.m in Sources */,
 				7D94C9BB1C76468A004E52A6 /* LivePathTrackerTheme.m in Sources */,
@@ -569,25 +654,31 @@
 		};
 		7D94C99A1C7639E6004E52A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01369E1EC8056EFBA1B9D91B /* Pods-LivePathTracker.debug.xcconfig */;
+			baseConfigurationReference = 237B57568BBE8A3A687D50B8 /* Pods-GoTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.LivePathTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.GoTime;
+				PRODUCT_NAME = "Go Time";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		7D94C99B1C7639E6004E52A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06ACBBB489B16DCDF97286AA /* Pods-LivePathTracker.release.xcconfig */;
+			baseConfigurationReference = 5C37EDA596C16D0F537BD281 /* Pods-GoTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.LivePathTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.GoTime;
+				PRODUCT_NAME = "Go Time";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -617,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "LivePathTracker" */ = {
+		7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "GoTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D94C99A1C7639E6004E52A6 /* Debug */,

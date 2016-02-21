@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PathCell : UITableViewCell
-@end
 @interface HomeViewController : UIViewController
 @end
 
