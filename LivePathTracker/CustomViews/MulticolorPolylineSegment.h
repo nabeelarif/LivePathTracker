@@ -7,7 +7,9 @@
 //
 
 #import <MapKit/MapKit.h>
-
+/**
+ A line to represent path on map with different colors.
+ */
 @interface MulticolorPolylineSegment : MKPolyline
 @property (strong, nonatomic) UIColor *color;
 

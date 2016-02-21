@@ -103,23 +103,19 @@
     MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:_arrLocation.count];
     return polyLine;
 }
+
 - (void)loadMap
 {
     if (_arrLocation.count > 0) {
-        
         self.mapView.hidden = NO;
-        
         // set the map bounds
         [self.mapView setRegion:[self defineRegion]];
-        
         NSArray *colorSegmentArray = [Utility colorSegmentsForLocations:_arrLocation];
         [self.mapView addOverlays:colorSegmentArray];
         
     } else {
-        
         // no locations were found!
         self.mapView.hidden = YES;
-        
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"Error"
                                   message:@"Sorry, this run has no locations saved."

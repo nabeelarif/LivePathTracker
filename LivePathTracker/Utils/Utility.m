@@ -9,6 +9,7 @@
 #import "Utility.h"
 #import "LocationModel.h"
 #import "MulticolorPolylineSegment.h"
+#import "Reachability.h"
 
 
 static bool const isMetric = YES;
@@ -193,5 +194,15 @@ static float const metersInMile = 1609.344;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
+}
++ (BOOL)isNetworkConnected
+{
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+       return NO;
+    } else {
+        return YES;
+    }
 }
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <ECSlidingViewController/ECSlidingAnimationController.h>
-
-
+/**
+ Controller to mange the sliding animation from Left Menu to Home / Activity ViewController and 
+ vice versa.
+ */
 @interface MainSlidingAnimationcontroller : ECSlidingAnimationController
 
 @end

@@ -10,6 +10,8 @@
 #import "BigButton.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import "UIColor+Theme.h"
+#import <MapKit/MapKit.h>
+#import "Utility.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet BigButton *btnBeginRun;
@@ -51,6 +53,29 @@
         } completion:^(BOOL finished) {
             self.btnBeginRun.enabled = YES;
         }];
+    }
+}
+- (IBAction)actionLetsGo:(id)sender {
+    
+    if ([Utility isNetworkConnected]==NO) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Please check your network connection." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    if ([CLLocationManager locationServicesEnabled] == NO) {
+        NSLog(@"locationServicesEnabled false");
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled" message:@"You currently have all location services for this device disabled. To enable, please go to Settings->Privacy->Location Services" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    } else {
+        CLAuthorizationStatus authorizationStatus= [CLLocationManager authorizationStatus];
+        
+        if(authorizationStatus == kCLAuthorizationStatusDenied || authorizationStatus == kCLAuthorizationStatusRestricted){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enable Location Service" message:@"You have to enable the Location Service to use this App. To enable, please go to Settings->Privacy->Location Services" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        } else {
+            [self performSegueWithIdentifier:@"PathViewController" sender:self];
+        }
     }
 }
 @end

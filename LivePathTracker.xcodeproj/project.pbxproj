@@ -72,6 +72,7 @@
 		7DFDBAEB1C79C45C00A42B53 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAE51C79C45C00A42B53 /* home@3x.png */; };
 		7DFDBAEE1C79DC2D00A42B53 /* LeftMenuHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAED1C79DC2D00A42B53 /* LeftMenuHeaderView.m */; };
 		7DFDBAF01C79DC3B00A42B53 /* LeftMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFDBAEF1C79DC3B00A42B53 /* LeftMenuHeaderView.xib */; };
+		7DFDBB111C7A3CA000A42B53 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBB101C7A3CA000A42B53 /* Reachability.m */; };
 		9B8DA573867949B0140D31BB /* libPods-GoTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F9E318166A0D5DA1414557 /* libPods-GoTime.a */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		7DFDBAEC1C79DC2D00A42B53 /* LeftMenuHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuHeaderView.h; sourceTree = "<group>"; };
 		7DFDBAED1C79DC2D00A42B53 /* LeftMenuHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuHeaderView.m; sourceTree = "<group>"; };
 		7DFDBAEF1C79DC3B00A42B53 /* LeftMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuHeaderView.xib; sourceTree = "<group>"; };
+		7DFDBB0F1C7A3CA000A42B53 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7DFDBB101C7A3CA000A42B53 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +201,7 @@
 		7D94C9841C7639E6004E52A6 /* LivePathTracker */ = {
 			isa = PBXGroup;
 			children = (
+				7DFDBB0E1C7A3C9800A42B53 /* Reachability */,
 				7DF6E9231C79013F002B11BC /* Images */,
 				7DF6E9091C78A868002B11BC /* GPX */,
 				7D94C9C91C7663A5004E52A6 /* Utils */,
@@ -344,6 +348,15 @@
 				7DFDBAD81C79BB4700A42B53 /* ActivityTableViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7DFDBB0E1C7A3C9800A42B53 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7DFDBB0F1C7A3CA000A42B53 /* Reachability.h */,
+				7DFDBB101C7A3CA000A42B53 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		E3AA0948B810E10CC7A4CAFF /* Pods */ = {
@@ -534,6 +547,7 @@
 				7D94C9C01C7646FD004E52A6 /* UIColor+Theme.m in Sources */,
 				7DF6E9221C78EFAF002B11BC /* BigButton.m in Sources */,
 				7D94C9B31C764612004E52A6 /* LocationModel.m in Sources */,
+				7DFDBB111C7A3CA000A42B53 /* Reachability.m in Sources */,
 				7D94C9C81C765506004E52A6 /* PathViewController.m in Sources */,
 				7D94C9B41C764612004E52A6 /* PathModel.m in Sources */,
 				7DFDBACF1C79B2FE00A42B53 /* LeftMenuTableViewController.m in Sources */,

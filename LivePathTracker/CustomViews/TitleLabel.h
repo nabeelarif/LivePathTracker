@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ Label used as title in most of the Views. This will be used in theme class to set 
+ theme of Title label in different Views.
+ */
 @interface TitleLabel : UILabel
 
 @end

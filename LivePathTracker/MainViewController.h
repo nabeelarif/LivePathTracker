@@ -7,7 +7,10 @@
 //
 
 #import <ECSlidingViewController/ECSlidingViewController.h>
-
+/**
+ The main viewcotnroller which holds the topViewController (Home / Activity ViewController) and 
+ underLeftViewController i.e LeftMenuViewController.
+ */
 @interface MainViewController : ECSlidingViewController
 
 @end

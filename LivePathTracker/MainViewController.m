@@ -36,13 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.delegate = self;
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 -(void)setUp
 {
     self.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping;

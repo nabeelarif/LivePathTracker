@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ Header of Left Menu view.
+ */
 @interface LeftMenuHeaderView : UIView
 
 + (instancetype)instantiateFromNib;

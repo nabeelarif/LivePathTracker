@@ -12,6 +12,8 @@
 #import "Utility.h"
 #import "UIColor+Theme.h"
 
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
 @interface PathViewController () <UIActionSheetDelegate, CLLocationManagerDelegate,MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *stopButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -37,6 +39,8 @@
     [self transparentNavigationBar];
     [self setupMap];
     [self startRun];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 -(void)transparentNavigationBar{
     [self.navigationController.navigationBar setBackgroundImage:[Utility imageFromColor:[UIColor appColorWithLightness:0.7 alpha:0.5]] forBarMetrics:UIBarMetricsDefault]; 
@@ -48,20 +52,18 @@
     [super viewWillDisappear:animated];
     [self.timer invalidate];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)applicationEnterBackground{
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    _locationManager.distanceFilter = kCLDistanceFilterNone;
+    
+    if (IS_OS_8_OR_LATER) {
+        [_locationManager requestAlwaysAuthorization];
+    }
+    [_locationManager startUpdatingLocation];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 -(void)setupMap{
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
@@ -102,8 +104,11 @@
     self.distance = 0;
     self.locations = [NSMutableArray array];
     [self startLocationUpdates];
+    [self startTimerAndUpdates];
+}
+-(void)startTimerAndUpdates{
     //Ignore location manager values for 2 seconds to avoid false values.
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         self.locationManager.delegate = self;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
                                                     selector:@selector(eachSecond) userInfo:nil repeats:YES];
@@ -118,13 +123,15 @@
         self.locationManager = [[CLLocationManager alloc] init];
     }
     
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.activityType = CLActivityTypeFitness;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    _locationManager.allowsBackgroundLocationUpdates = YES;
+    _locationManager.pausesLocationUpdatesAutomatically = NO;
     
     // Movement threshold for new events.
     self.locationManager.distanceFilter = 5; // meters
     
-    [self.locationManager requestWhenInUseAuthorization];
+//    [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager requestAlwaysAuthorization];
     
     [self.locationManager startUpdatingLocation];
@@ -132,6 +139,7 @@
 - (void)eachSecond
 {
     self.seconds++;
+    // Update information on UI
     self.label.text = [NSString stringWithFormat:
                        @"  Time: %@\n  Distance: %@\n  Pace: %@",
                        [Utility stringifySecondCount:self.seconds usingLongFormat:NO],
@@ -148,7 +156,7 @@
         NSDate *eventDate = newLocation.timestamp;
         
         NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-        
+        // Only accomodate updates with Better accuracy
         if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
             
             // update distance
@@ -167,12 +175,37 @@
     }
 }
 
+- (void)locationManager: (CLLocationManager *)manager didFailWithError: (NSError *)error
+{
+    // NSLog(@"locationManager error:%@",error);
+    
+    switch([error code])
+    {
+        case kCLErrorNetwork: // general, network-related error
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Please check your network connection." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            break;
+        case kCLErrorDenied:{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enable Location Service" message:@"You have to enable the Location Service to use this App. To enable, please go to Settings->Privacy->Location Services" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            break;
+        default:
+        {
+            
+        }
+            break;
+    }
+}
+
 
 #pragma mark - Action Methods
 - (IBAction)actionStop:(id)sender {
     [_locationManager stopUpdatingLocation];
     UIAlertController *actionController = [[UIAlertController alloc] init];
-    actionController.message = @"You have a track completed.";
+    actionController.message = @"What would you like to do with this activity.";
     actionController.preferredAction = UIAlertControllerStyleActionSheet;
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //Do nothing;

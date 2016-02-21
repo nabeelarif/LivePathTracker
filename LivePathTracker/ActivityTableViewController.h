@@ -10,6 +10,10 @@
 
 @interface PathCell : UITableViewCell
 @end
+/**
+ Activity ViewController lists all the archived activiites of user's journey in a TableView. User
+ can see the details of each by taping on any item.
+ */
 @interface ActivityTableViewController : UITableViewController
 
 @end
