@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 /**
- A category of UIFont, customized for 'Go Time' app.
+ A category of UIFont, customized for 'Path Tracker' app.
  */
 @interface UIFont (Theme)
 /**

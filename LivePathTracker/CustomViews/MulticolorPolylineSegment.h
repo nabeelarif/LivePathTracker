@@ -8,7 +8,8 @@
 
 #import <MapKit/MapKit.h>
 /**
- A line to represent path on map with different colors.
+ A line to represent path on map with different colors. It will be drawn on map and can represent
+ path as well as a rough estimate of speed on different locations.
  */
 @interface MulticolorPolylineSegment : MKPolyline
 @property (strong, nonatomic) UIColor *color;

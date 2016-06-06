@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5DD012FE1D060DBB00F4A38A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 5DD012FC1D060DBB00F4A38A /* iTunesArtwork */; };
+		5DD012FF1D060DBB00F4A38A /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 5DD012FD1D060DBB00F4A38A /* iTunesArtwork@2x */; };
 		5DDF14DB1D0381B700C88CE5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF14DA1D0381B700C88CE5 /* background.png */; };
 		7D94C9871C7639E6004E52A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9861C7639E6004E52A6 /* main.m */; };
 		7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9891C7639E6004E52A6 /* AppDelegate.m */; };
@@ -54,8 +56,6 @@
 		7DF6E91E1C78A880002B11BC /* N419Li.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9131C78A880002B11BC /* N419Li.gpx */; };
 		7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9141C78A880002B11BC /* oprit.gpx */; };
 		7DF6E9221C78EFAF002B11BC /* BigButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6E9211C78EFAF002B11BC /* BigButton.m */; };
-		7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94D1C79080A002B11BC /* iTunesArtwork */; };
-		7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */; };
 		7DFDBACC1C79AAB000A42B53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */; };
 		7DFDBACF1C79B2FE00A42B53 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBACE1C79B2FE00A42B53 /* LeftMenuTableViewController.m */; };
 		7DFDBAD31C79B86A00A42B53 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBAD21C79B86A00A42B53 /* MainViewController.m */; };
@@ -80,6 +80,8 @@
 		237B57568BBE8A3A687D50B8 /* Pods-GoTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.debug.xcconfig"; sourceTree = "<group>"; };
 		26F9E318166A0D5DA1414557 /* libPods-GoTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37EDA596C16D0F537BD281 /* Pods-GoTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.release.xcconfig"; sourceTree = "<group>"; };
+		5DD012FC1D060DBB00F4A38A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		5DD012FD1D060DBB00F4A38A /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		5DDF14DA1D0381B700C88CE5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		7D94C9821C7639E6004E52A6 /* Path Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Path Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C9861C7639E6004E52A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,8 +132,6 @@
 		7DF6E9141C78A880002B11BC /* oprit.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = oprit.gpx; sourceTree = "<group>"; };
 		7DF6E9201C78EFAF002B11BC /* BigButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigButton.h; sourceTree = "<group>"; };
 		7DF6E9211C78EFAF002B11BC /* BigButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigButton.m; sourceTree = "<group>"; };
-		7DF6E94D1C79080A002B11BC /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		7DFDBACA1C79AAB000A42B53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 		7DFDBACD1C79B2FE00A42B53 /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
@@ -215,9 +215,9 @@
 				7D94C9911C7639E6004E52A6 /* Assets.xcassets */,
 				7D94C9931C7639E6004E52A6 /* LaunchScreen.storyboard */,
 				7D94C9961C7639E6004E52A6 /* Info.plist */,
+				5DD012FC1D060DBB00F4A38A /* iTunesArtwork */,
+				5DD012FD1D060DBB00F4A38A /* iTunesArtwork@2x */,
 				7D94C9851C7639E6004E52A6 /* Supporting Files */,
-				7DF6E94D1C79080A002B11BC /* iTunesArtwork */,
-				7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */,
 			);
 			path = LivePathTracker;
 			sourceTree = "<group>";
@@ -444,11 +444,9 @@
 				7DF6E91D1C78A880002B11BC /* n402Re.gpx in Resources */,
 				7DF6E9151C78A880002B11BC /* A2Li.gpx in Resources */,
 				7DFDBADE1C79C04400A42B53 /* menu@2x.png in Resources */,
-				7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */,
 				7DF6E9191C78A880002B11BC /* A2ReTest.gpx in Resources */,
 				7DF6E9171C78A880002B11BC /* A2Re.gpx in Resources */,
 				5DDF14DB1D0381B700C88CE5 /* background.png in Resources */,
-				7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */,
 				7DFDBAEB1C79C45C00A42B53 /* home@3x.png in Resources */,
 				7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */,
 				7DF6E9181C78A880002B11BC /* A2ReLong.gpx in Resources */,
@@ -460,7 +458,9 @@
 				7DF6E91B1C78A880002B11BC /* afslag.gpx in Resources */,
 				7DFDBADF1C79C04400A42B53 /* menu.png in Resources */,
 				7DFDBAE81C79C45C00A42B53 /* clock@3x.png in Resources */,
+				5DD012FE1D060DBB00F4A38A /* iTunesArtwork in Resources */,
 				7D94C9921C7639E6004E52A6 /* Assets.xcassets in Resources */,
+				5DD012FF1D060DBB00F4A38A /* iTunesArtwork@2x in Resources */,
 				7DFDBAE91C79C45C00A42B53 /* home.png in Resources */,
 				7DFDBADD1C79C04400A42B53 /* menu@3x.png in Resources */,
 				7D94C9901C7639E6004E52A6 /* Main.storyboard in Resources */,

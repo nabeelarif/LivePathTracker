@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 /**
-  A category of UIColor customized for Go Time app and provide different theme color
+  A category of UIColor customized for Path Tracker app and provide different theme color
   combinations.
  */
 @interface UIColor (Theme)
@@ -33,6 +33,24 @@
 +(UIColor*)appColorWithLightness:(CGFloat)lightness alpha:(CGFloat)alpha;
 
 #pragma mark - Util
+/**
+ *  Generates color based on provided values
+ *
+ *  @param red   color value for red from 0-255
+ *  @param green color value for green from 0-255
+ *  @param blue  color value for blue from 0-255
+ *  @param alpha Alpha value of color from 0.0-1.0
+ *
+ *  @return Color based on parameters
+ */
 + (UIColor*)colorWith8BitRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha;
+/**
+ *  Generates color based on string hex color values and alpha provided
+ *
+ *  @param hex   Hex representation of color example @"#38ACFF" etc
+ *  @param alpha Alpha value of color from 0.0-1.0
+ *
+ *  @return Color object of specified properties
+ */
 + (UIColor*)colorWithHex:(NSString*)hex alpha:(CGFloat)alpha;
 @end

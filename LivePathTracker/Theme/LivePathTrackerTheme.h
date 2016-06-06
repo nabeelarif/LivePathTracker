@@ -12,5 +12,9 @@
  could be called from addDidFinishLaunchingWithOptions: so that app's theme is set.
  */
 @interface LivePathTrackerTheme : NSObject
+/**
+ This is the main method which we will invoke form start of the application to apply the
+ theme across the application
+ */
 + (void)applyTheme;
 @end
