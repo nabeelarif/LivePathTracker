@@ -35,6 +35,7 @@
     self.imageViewIcon.layer.borderColor = [UIColor appColorWithLightness:0.2].CGColor;
     self.labelAppName.alpha = .0;
     self.isFirstTime = YES;
+    self.btnBeginRun.layer.cornerRadius = 75.0;
     
 }
 -(void)viewDidAppear:(BOOL)animated

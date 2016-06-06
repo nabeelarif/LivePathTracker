@@ -29,7 +29,7 @@
     NSInteger index = round(lightness*20.);
     index = index%20;
     index = 20-index;
-    NSString *colorCode = (NSString *)[appColorArray objectAtIndex:index];
+    NSString *colorCode = (NSString *)[appColorArrayRed objectAtIndex:index];
     return [self colorWithHex:colorCode alpha:alpha];
 }
 

@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5DDF14DB1D0381B700C88CE5 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DDF14DA1D0381B700C88CE5 /* background.png */; };
 		7D94C9871C7639E6004E52A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9861C7639E6004E52A6 /* main.m */; };
 		7D94C98A1C7639E6004E52A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C9891C7639E6004E52A6 /* AppDelegate.m */; };
 		7D94C98D1C7639E6004E52A6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D94C98C1C7639E6004E52A6 /* HomeViewController.m */; };
@@ -53,7 +54,6 @@
 		7DF6E91E1C78A880002B11BC /* N419Li.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9131C78A880002B11BC /* N419Li.gpx */; };
 		7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9141C78A880002B11BC /* oprit.gpx */; };
 		7DF6E9221C78EFAF002B11BC /* BigButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF6E9211C78EFAF002B11BC /* BigButton.m */; };
-		7DF6E9251C790149002B11BC /* highway-919073_1280.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */; };
 		7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94D1C79080A002B11BC /* iTunesArtwork */; };
 		7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */; };
 		7DFDBACC1C79AAB000A42B53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFDBACB1C79AAB000A42B53 /* MulticolorPolylineSegment.m */; };
@@ -80,7 +80,8 @@
 		237B57568BBE8A3A687D50B8 /* Pods-GoTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.debug.xcconfig"; sourceTree = "<group>"; };
 		26F9E318166A0D5DA1414557 /* libPods-GoTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C37EDA596C16D0F537BD281 /* Pods-GoTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoTime/Pods-GoTime.release.xcconfig"; sourceTree = "<group>"; };
-		7D94C9821C7639E6004E52A6 /* Go Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DDF14DA1D0381B700C88CE5 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		7D94C9821C7639E6004E52A6 /* Path Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Path Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D94C9861C7639E6004E52A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D94C9881C7639E6004E52A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D94C9891C7639E6004E52A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		7DF6E9141C78A880002B11BC /* oprit.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = oprit.gpx; sourceTree = "<group>"; };
 		7DF6E9201C78EFAF002B11BC /* BigButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigButton.h; sourceTree = "<group>"; };
 		7DF6E9211C78EFAF002B11BC /* BigButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigButton.m; sourceTree = "<group>"; };
-		7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "highway-919073_1280.jpg"; sourceTree = "<group>"; };
 		7DF6E94D1C79080A002B11BC /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		7DF6E94E1C79080A002B11BC /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		7DFDBACA1C79AAB000A42B53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		7D94C9831C7639E6004E52A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D94C9821C7639E6004E52A6 /* Go Time.app */,
+				7D94C9821C7639E6004E52A6 /* Path Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 				7DFDBADA1C79C04400A42B53 /* menu@3x.png */,
 				7DFDBADB1C79C04400A42B53 /* menu@2x.png */,
 				7DFDBADC1C79C04400A42B53 /* menu.png */,
-				7DF6E9241C790149002B11BC /* highway-919073_1280.jpg */,
+				5DDF14DA1D0381B700C88CE5 /* background.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -371,9 +371,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D94C9811C7639E6004E52A6 /* GoTime */ = {
+		7D94C9811C7639E6004E52A6 /* Path Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "GoTime" */;
+			buildConfigurationList = 7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "Path Tracker" */;
 			buildPhases = (
 				141FB9F05E22673BF49EDDB7 /* Check Pods Manifest.lock */,
 				7D94C97E1C7639E6004E52A6 /* Sources */,
@@ -386,9 +386,9 @@
 			);
 			dependencies = (
 			);
-			name = GoTime;
+			name = "Path Tracker";
 			productName = LivePathTracker;
-			productReference = 7D94C9821C7639E6004E52A6 /* Go Time.app */;
+			productReference = 7D94C9821C7639E6004E52A6 /* Path Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -427,7 +427,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7D94C9811C7639E6004E52A6 /* GoTime */,
+				7D94C9811C7639E6004E52A6 /* Path Tracker */,
 				7D94C9A31C7642AA004E52A6 /* Mogenerator */,
 			);
 		};
@@ -447,6 +447,7 @@
 				7DF6E9501C79080A002B11BC /* iTunesArtwork@2x in Resources */,
 				7DF6E9191C78A880002B11BC /* A2ReTest.gpx in Resources */,
 				7DF6E9171C78A880002B11BC /* A2Re.gpx in Resources */,
+				5DDF14DB1D0381B700C88CE5 /* background.png in Resources */,
 				7DF6E94F1C79080A002B11BC /* iTunesArtwork in Resources */,
 				7DFDBAEB1C79C45C00A42B53 /* home@3x.png in Resources */,
 				7DF6E91F1C78A880002B11BC /* oprit.gpx in Resources */,
@@ -454,7 +455,6 @@
 				7DF6E91C1C78A880002B11BC /* n402Li.gpx in Resources */,
 				7DFDBAE61C79C45C00A42B53 /* clock.png in Resources */,
 				7DF6E91E1C78A880002B11BC /* N419Li.gpx in Resources */,
-				7DF6E9251C790149002B11BC /* highway-919073_1280.jpg in Resources */,
 				7DFDBAF01C79DC3B00A42B53 /* LeftMenuHeaderView.xib in Resources */,
 				7DF6E91A1C78A880002B11BC /* A12.gpx in Resources */,
 				7DF6E91B1C78A880002B11BC /* afslag.gpx in Resources */,
@@ -675,8 +675,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.GoTime;
-				PRODUCT_NAME = "Go Time";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.pathtracker;
+				PRODUCT_NAME = "Path Tracker";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -690,8 +690,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LivePathTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.GoTime;
-				PRODUCT_NAME = "Go Time";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nabeelarif.pathtracker;
+				PRODUCT_NAME = "Path Tracker";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -722,7 +722,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "GoTime" */ = {
+		7D94C9991C7639E6004E52A6 /* Build configuration list for PBXNativeTarget "Path Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D94C99A1C7639E6004E52A6 /* Debug */,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Mv-3F-cca">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Mv-3F-cca">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -131,47 +131,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highway-919073_1280.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O2H-yM-M48">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="O2H-yM-M48">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-Fr-bBD" customClass="BigButton">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ZPH-0r-0b7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Let's Go!"/>
-                                <connections>
-                                    <action selector="actionLetsGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yJ-QO-O5N"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3X-vv-6D0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Path Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3X-vv-6D0">
                                 <rect key="frame" x="226" y="150" width="149" height="45.5"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="40"/>
-                                <color key="textColor" red="0.091042451560497284" green="0.57772189378738403" blue="0.56714707612991333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.30320977555986339" blue="0.18640280747518745" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.91591179370880127" green="0.97675865888595581" blue="0.97701972723007202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-0S-eJH">
-                                <rect key="frame" x="158" y="143.5" width="60" height="60"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-0S-eJH">
+                                <rect key="frame" x="158" y="143" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="J9g-DK-kvh"/>
                                     <constraint firstAttribute="width" constant="60" id="Nl4-M5-cZ3"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-Fr-bBD" customClass="BigButton">
+                                <rect key="frame" x="225" y="422" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="01V-hQ-9UO"/>
+                                    <constraint firstAttribute="width" constant="150" id="DiS-i5-sdB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start!"/>
+                                <connections>
+                                    <action selector="actionLetsGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yJ-QO-O5N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="O2H-yM-M48" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Qg-yg-pVD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cKL-Fr-bBD" secondAttribute="bottom" id="4lX-lx-WrB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O2H-yM-M48" secondAttribute="bottom" id="6dH-hS-7ZN"/>
-                            <constraint firstAttribute="trailing" secondItem="cKL-Fr-bBD" secondAttribute="trailing" id="7Dk-Sy-fmh"/>
                             <constraint firstItem="E3X-vv-6D0" firstAttribute="leading" secondItem="PgA-0S-eJH" secondAttribute="trailing" constant="8" id="BF1-MC-msQ"/>
+                            <constraint firstItem="cKL-Fr-bBD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GM7-oJ-XLE"/>
                             <constraint firstItem="O2H-yM-M48" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nrq-AT-44U"/>
                             <constraint firstItem="PgA-0S-eJH" firstAttribute="centerY" secondItem="E3X-vv-6D0" secondAttribute="centerY" id="dU9-oV-6Hg"/>
                             <constraint firstAttribute="trailing" secondItem="O2H-yM-M48" secondAttribute="trailing" id="gZO-sk-95d"/>
                             <constraint firstItem="E3X-vv-6D0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nDL-Y2-bfA"/>
-                            <constraint firstItem="cKL-Fr-bBD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q2V-zi-xtt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cKL-Fr-bBD" secondAttribute="bottom" constant="28" id="uhs-Kd-K6G"/>
                             <constraint firstItem="E3X-vv-6D0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="ydO-P5-mob"/>
                         </constraints>
                     </view>
@@ -425,8 +425,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background.png" width="408" height="619"/>
         <image name="clock.png" width="24" height="24"/>
-        <image name="highway-919073_1280.jpg" width="1280" height="853"/>
         <image name="home.png" width="24" height="24"/>
         <image name="icon" width="60" height="60"/>
         <image name="menu.png" width="24" height="24"/>
